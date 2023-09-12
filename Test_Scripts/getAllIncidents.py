@@ -1,9 +1,11 @@
 import requests
 import json
-class getAllIncidents:
+class getAllIncident:
+ def __init__(self) -> None:
+     pass
  
  def getincidentapi():
-        listOfIncidents = ["IncidentList"]
+        listOfIncidents = []
         url = "https://dev179896.service-now.com/api/now/table/incident"
 
         headers = {

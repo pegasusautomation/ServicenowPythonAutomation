@@ -1,26 +1,30 @@
-from email.message import EmailMessage
 import smtplib
-from getAllIncidents import getAllIncidents
 import json
 import pandas as pd
+from email.message import EmailMessage
+from pretty_html_table import build_table
+from getAllIncidents import getAllIncident
+from writeIncidentListToExcel import writeIncidentListToXl
 
+#Read credentials to send mail
 file = open("credentials.json")
 data = json.load(file)
+
 # define content
 recipients = data["recieveremail"]
 sender = data["senderemail"]
 senderpassword = data["senderpassword"]
 subject = "Mail sent by python code written by RAGHAVENRDRA G A"
-list = getAllIncidents.getincidentapi()
+incident_List = getAllIncident.getincidentapi()
 
-#To write list of text into text doc
-with open ('text.txt', 'w') as file:  
-    for line_1 in list:  
-        file.write(line_1)  
-        file.write('\n') 
+#To write list of text into excel doc
+writeIncidentListToXl.writeDataToXl(incident_List)
+
 #Read file data using pandas
-data = pd.read_csv("text.txt",sep=" ")
-pd.set_option("display.max_rows",200)
+path = "E:\GA - Dont Delete\ServicenowPythonAutomation\Test_Data\Incident_List.xlsx"
+data = pd.read_excel(path)
+
+# pd.set_option("display.max_rows",200)
 print(data)
 body = """
 <html>
@@ -40,8 +44,15 @@ Please find the below incident list
 
 </html>
 """.format(
-    data
-    )
+    build_table(
+        data,
+        "blue_light",
+        width="auto",
+        font_family="Open Sans",
+        font_size="13px",
+        text_align="justify",
+    ),
+)
 
 # make up message
 msg = EmailMessage()
