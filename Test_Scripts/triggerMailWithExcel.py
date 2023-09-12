@@ -7,7 +7,7 @@ from getAllIncidents import getAllIncident
 from writeIncidentListToExcel import writeIncidentListToXl
 
 #Read credentials to send mail
-file = open("credentials.json")
+file = open("E:\GA - Dont Delete\ServicenowPythonAutomation\credentials.json")
 data = json.load(file)
 
 # define content
