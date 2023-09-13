@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 class writeIncidentListToXl:
         def writeDataToXl(incident_List,Incident_Assigned_Group):
                 path = "E:\GA - Dont Delete\ServicenowPythonAutomation\Test_Data\Incident_List.xlsx"
