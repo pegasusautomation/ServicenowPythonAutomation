@@ -6,6 +6,7 @@ class getAllIncident:
  
  def getincidentapi():
         listOfIncidents = []
+        list1 = [1,2]
         url = "https://dev179896.service-now.com/api/now/table/incident"
 
         headers = {
@@ -21,7 +22,7 @@ class getAllIncident:
         psrsedData = res.json()
         for item in psrsedData['result']:
             listOfIncidents.append(item['number'])
-        return listOfIncidents
+        return listOfIncidents, list1
             # print(listOfIncident)
 # with open ('text.txt', 'w') as file:  
 #              for line_1 in listOfIncident:  

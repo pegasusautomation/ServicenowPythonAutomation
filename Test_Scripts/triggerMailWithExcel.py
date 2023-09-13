@@ -3,7 +3,8 @@ import json
 import pandas as pd
 from email.message import EmailMessage
 from pretty_html_table import build_table
-from getAllIncidents import getAllIncident
+# from getAllIncidents import getAllIncident
+from getIncidentsBasedOnAssignedGroup import getAllIncidentWithAssignedGroups
 from writeIncidentListToExcel import writeIncidentListToXl
 
 #Read credentials to send mail
@@ -15,10 +16,11 @@ recipients = data["recieveremail"]
 sender = data["senderemail"]
 senderpassword = data["senderpassword"]
 subject = "Mail sent by python code written by RAGHAVENRDRA G A"
-incident_List = getAllIncident.getincidentapi()
+# l1,incident_List = getAllIncident.getincidentapi()
+incident_List,Incident_Assigned_Group = getAllIncidentWithAssignedGroups.getincidentWithAssignedGroupApi()
 
 #To write list of text into excel doc
-writeIncidentListToXl.writeDataToXl(incident_List)
+writeIncidentListToXl.writeDataToXl(incident_List,Incident_Assigned_Group)
 
 #Read file data using pandas
 path = "E:\GA - Dont Delete\ServicenowPythonAutomation\Test_Data\Incident_List.xlsx"
