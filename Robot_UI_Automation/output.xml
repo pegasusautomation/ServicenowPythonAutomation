@@ -1,59 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230914 16:13:39.164" rpa="false" schemaversion="4">
-<suite id="s1" name="Tasks" source="E:\GA - Dont Delete\ServicenowPythonAutomation\Robot_UI_Automation\tasks.robot">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230914 16:43:40.857" rpa="false" schemaversion="4">
+<suite id="s1" name="OrangeHRMLogin" source="E:\GA - Dont Delete\ServicenowPythonAutomation\Robot_UI_Automation\OrangeHRMLogin.robot">
 <test id="s1-t1" name="Login" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230914 16:13:39.556" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20230914 16:13:39.556" endtime="20230914 16:13:50.706"/>
+<msg timestamp="20230914 16:43:45.917" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230914 16:43:45.917" endtime="20230914 16:44:11.585"/>
 </kw>
+<kw name="LoginToApplication">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230914 16:13:50.706" endtime="20230914 16:13:50.822"/>
+<status status="PASS" starttime="20230914 16:44:11.593" endtime="20230914 16:44:11.723"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>20</arg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230914 16:14:10.824" level="INFO">Slept 20 seconds</msg>
-<status status="PASS" starttime="20230914 16:13:50.823" endtime="20230914 16:14:10.824"/>
+<msg timestamp="20230914 16:44:16.730" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230914 16:44:11.723" endtime="20230914 16:44:16.730"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>username</arg>
-<arg>Admin</arg>
+<arg>${URL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230914 16:14:10.826" level="INFO">Typing text 'Admin' into text field 'username'.</msg>
-<status status="PASS" starttime="20230914 16:14:10.824" endtime="20230914 16:14:10.950"/>
+<msg timestamp="20230914 16:44:16.730" level="INFO">Typing text 'https://google.com' into text field 'username'.</msg>
+<status status="PASS" starttime="20230914 16:44:16.730" endtime="20230914 16:44:17.342"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>password</arg>
-<arg>admin123</arg>
+<arg>${BROWSER}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230914 16:14:10.951" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20230914 16:14:10.990" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230914 16:14:11.083" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230914 16:14:10.951" endtime="20230914 16:14:11.083"/>
+<msg timestamp="20230914 16:44:17.342" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20230914 16:44:17.431" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230914 16:44:17.633" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230914 16:44:17.342" endtime="20230914 16:44:17.633"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://button[@class = 'oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230914 16:14:11.084" level="INFO">Clicking button 'xpath://button[@class = 'oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']'.</msg>
-<status status="PASS" starttime="20230914 16:14:11.084" endtime="20230914 16:14:11.167"/>
+<msg timestamp="20230914 16:44:17.633" level="INFO">Clicking button 'xpath://button[@class = 'oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']'.</msg>
+<status status="PASS" starttime="20230914 16:44:17.633" endtime="20230914 16:44:19.114"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>20</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230914 16:14:31.167" level="INFO">Slept 20 seconds</msg>
-<status status="PASS" starttime="20230914 16:14:11.167" endtime="20230914 16:14:31.167"/>
+<status status="PASS" starttime="20230914 16:44:11.585" endtime="20230914 16:44:19.114"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230914 16:14:31.167" endtime="20230914 16:14:33.570"/>
+<status status="PASS" starttime="20230914 16:44:19.114" endtime="20230914 16:44:22.155"/>
 </kw>
-<status status="PASS" starttime="20230914 16:13:39.556" endtime="20230914 16:14:33.570"/>
+<status status="PASS" starttime="20230914 16:43:45.917" endtime="20230914 16:44:22.163"/>
 </test>
-<status status="PASS" starttime="20230914 16:13:39.164" endtime="20230914 16:14:33.570"/>
+<status status="PASS" starttime="20230914 16:43:40.865" endtime="20230914 16:44:22.163"/>
 </suite>
 <statistics>
 <total>
@@ -62,7 +59,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="OrangeHRMLogin">OrangeHRMLogin</stat>
 </suite>
 </statistics>
 <errors>
