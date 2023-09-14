@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "e:/GA - Dont Delete/ServicenowPythonAutomation/Robot_UI_Automation/."
+    ],
+    "python.terminal.activateEnvironment": false
+}
