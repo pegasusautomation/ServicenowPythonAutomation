@@ -1,56 +1,309 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230914 16:43:40.857" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231116 21:32:32.718" rpa="false" schemaversion="4">
 <suite id="s1" name="OrangeHRMLogin" source="E:\GA - Dont Delete\ServicenowPythonAutomation\Robot_UI_Automation\OrangeHRMLogin.robot">
-<test id="s1-t1" name="Login" line="9">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230914 16:43:45.917" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20230914 16:43:45.917" endtime="20230914 16:44:11.585"/>
+<test id="s1-t1" name="Login" line="6">
+<kw name="download file" library="Downloadfile">
+<var>${value}</var>
+<kw name="Getrequestitemdesc" library="SNrequestitemdetails">
+<var>&amp;{value}</var>
+<msg timestamp="20231116 21:32:52.363" level="INFO">&amp;{value} = { RITM0000002=Galaxy | RITM0000005=S7 | RITM0000001=Lenovo | RITM0000004=Retina | RITM0000003=Lenovo }</msg>
+<status status="PASS" starttime="20231116 21:32:33.513" endtime="20231116 21:32:52.363"/>
 </kw>
-<kw name="LoginToApplication">
+<for flavor="IN">
+<var>${element_val}</var>
+<value>@{value.values()}</value>
+<iter>
+<var name="${element_val}">Galaxy</var>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Galaxy&quot;">
+<kw name="LoginToApplication" library="Downloadfile">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231116 21:32:52.372" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20231116 21:32:52.371" endtime="20231116 21:33:12.211"/>
+</kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230914 16:44:11.593" endtime="20230914 16:44:11.723"/>
+<status status="PASS" starttime="20231116 21:33:12.211" endtime="20231116 21:33:12.332"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230914 16:44:16.730" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230914 16:44:11.723" endtime="20230914 16:44:16.730"/>
+<msg timestamp="20231116 21:33:17.332" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231116 21:33:12.332" endtime="20231116 21:33:17.332"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>username</arg>
-<arg>${URL}</arg>
+<arg>admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230914 16:44:16.730" level="INFO">Typing text 'https://google.com' into text field 'username'.</msg>
-<status status="PASS" starttime="20230914 16:44:16.730" endtime="20230914 16:44:17.342"/>
+<msg timestamp="20231116 21:33:17.332" level="INFO">Typing text 'admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20231116 21:33:17.332" endtime="20231116 21:33:17.510"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>password</arg>
-<arg>${BROWSER}</arg>
+<arg>admin123</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230914 16:44:17.342" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20230914 16:44:17.431" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230914 16:44:17.633" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230914 16:44:17.342" endtime="20230914 16:44:17.633"/>
+<msg timestamp="20231116 21:33:17.510" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231116 21:33:17.582" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231116 21:33:17.696" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231116 21:33:17.510" endtime="20231116 21:33:17.696"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://button[@class = 'oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230914 16:44:17.633" level="INFO">Clicking button 'xpath://button[@class = 'oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']'.</msg>
-<status status="PASS" starttime="20230914 16:44:17.633" endtime="20230914 16:44:19.114"/>
+<msg timestamp="20231116 21:33:17.705" level="INFO">Clicking button 'xpath://button[@class = 'oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']'.</msg>
+<status status="PASS" starttime="20231116 21:33:17.704" endtime="20231116 21:33:17.830"/>
 </kw>
-<status status="PASS" starttime="20230914 16:44:11.585" endtime="20230914 16:44:19.114"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231116 21:33:27.831" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231116 21:33:17.830" endtime="20231116 21:33:27.831"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>User log succesful</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="PASS" starttime="20231116 21:32:52.363" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="PASS" starttime="20231116 21:32:52.363" endtime="20231116 21:33:27.831"/>
+</branch>
+<status status="PASS" starttime="20231116 21:32:52.363" endtime="20231116 21:33:27.831"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Retina&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>RetinaReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;S7&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>S7Report</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Lenovo&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>LenovoReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</if>
+<status status="PASS" starttime="20231116 21:32:52.363" endtime="20231116 21:33:27.831"/>
+</iter>
+<iter>
+<var name="${element_val}">S7</var>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Galaxy&quot;">
+<kw name="LoginToApplication" library="Downloadfile">
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Retina&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>RetinaReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.831"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;S7&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>S7Report</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.836"/>
+</kw>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.836"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.836"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Lenovo&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>LenovoReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</if>
+<status status="PASS" starttime="20231116 21:33:27.831" endtime="20231116 21:33:27.837"/>
+</iter>
+<iter>
+<var name="${element_val}">Lenovo</var>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Galaxy&quot;">
+<kw name="LoginToApplication" library="Downloadfile">
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Retina&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>RetinaReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;S7&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>S7Report</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Lenovo&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>LenovoReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</kw>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</if>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</iter>
+<iter>
+<var name="${element_val}">Retina</var>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Galaxy&quot;">
+<kw name="LoginToApplication" library="Downloadfile">
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.837"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Retina&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>RetinaReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.845"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;S7&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>S7Report</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Lenovo&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>LenovoReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</if>
+<status status="PASS" starttime="20231116 21:33:27.837" endtime="20231116 21:33:27.845"/>
+</iter>
+<iter>
+<var name="${element_val}">Lenovo</var>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Galaxy&quot;">
+<kw name="LoginToApplication" library="Downloadfile">
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Retina&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>RetinaReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;S7&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>S7Report</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="NOT RUN" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</if>
+<if>
+<branch type="IF" condition="'${element_val}' == &quot;Lenovo&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>LenovoReport</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</kw>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</branch>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</if>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:27.845"/>
+</iter>
+<status status="PASS" starttime="20231116 21:32:52.363" endtime="20231116 21:33:27.845"/>
+</for>
+<msg timestamp="20231116 21:33:27.845" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20231116 21:32:33.513" endtime="20231116 21:33:27.845"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230914 16:44:19.114" endtime="20230914 16:44:22.155"/>
+<status status="PASS" starttime="20231116 21:33:27.845" endtime="20231116 21:33:30.384"/>
 </kw>
-<status status="PASS" starttime="20230914 16:43:45.917" endtime="20230914 16:44:22.163"/>
+<status status="PASS" starttime="20231116 21:32:33.505" endtime="20231116 21:33:30.384"/>
 </test>
-<status status="PASS" starttime="20230914 16:43:40.865" endtime="20230914 16:44:22.163"/>
+<status status="PASS" starttime="20231116 21:32:32.718" endtime="20231116 21:33:30.384"/>
 </suite>
 <statistics>
 <total>
@@ -63,5 +316,18 @@
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231116 21:32:33.505" level="ERROR">Error in file 'E:\GA - Dont Delete\ServicenowPythonAutomation\Robot_UI_Automation\Downloadfile.robot' on line 5: Importing library 'RPA.Robocorp.WorkItems' failed: ModuleNotFoundError: No module named 'RPA'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python311
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\Pythonwin</msg>
 </errors>
 </robot>

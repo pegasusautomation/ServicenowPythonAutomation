@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20231116 15:01:04.564" rpa="false" schemaversion="3">
+<suite id="s1" name="OrangeHRMLogin" source="e:\GA - Dont Delete\ServicenowPythonAutomation\Robot_UI_Automation\OrangeHRMLogin.robot">
+<test id="s1-t1" name="Login" line="11">
+<kw name="download file" library="Downloadfile">
+<var>${value}</var>
+<kw name="Getrequestitemdesc" library="SNrequestitemdetails">
+<var>${value}</var>
+<msg timestamp="20231116 15:01:29.885" level="INFO">&lt;p&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-size: medium;"&gt;The Galaxy S7 offers a multitude of features packaged within cutting edge design.&lt;/span&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: small;"&gt;This phone will be part of the corporate mobile contract, and you will not be billed for its use. The phone has the following technical specifications:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;Android OS &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;Dual edge Super AMOLED&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;Black Onyx&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;CMOS 5.0 MP Camera Resolution Front&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;Dual Pixel 12.0 MP Camera Resolution Back&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;Wireless Charging&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: small;"&gt;External Memory MicroSD (Up to 200GB)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+True
+&lt;p&gt;&lt;font size="3"&gt;&lt;span&gt;x1 Carbon&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10.0pt;"&gt;The x1 Carbon is Lenovo&amp;#39;s lightest ThinkPad yet. It provides a QHD display that fights glare and weighs less than three pounds. Ideal for most computing tasks, and highly mobile. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10.0pt;"&gt;Technical Specs:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;Intel core i5 processor&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;512GB solid state drive (SSD) &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;Backlit keyboard&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+False
+
+			&lt;p&gt;
+				&lt;font size="3"&gt;
+					&lt;span&gt;
+						iPad with Retina display Wi-Fi 16GB - Black &lt;/span&gt;
+				&lt;/font&gt;
+			&lt;/p&gt;
+			&lt;p&gt;
+				&lt;span&gt;Key Features:&lt;/span&gt;
+			&lt;/p&gt;
+			&lt;ul&gt;&lt;li&gt;
+					&lt;span style="font-size: 10.0pt;"&gt;Retina display (2048x1536 resolution)&lt;/span&gt;
+				&lt;/li&gt;&lt;li&gt;
+					&lt;span style="font-size: 10.0pt;"&gt;16GB storage&lt;/span&gt;
+				&lt;/li&gt;&lt;li&gt;
+					&lt;span style="font-size: 10.0pt;"&gt;Wi-Fi enabled&lt;/span&gt;
+				&lt;/li&gt;&lt;li&gt;
+					&lt;span style="font-size: 10.0pt;"&gt;Built-in speaker, microphone and camera&lt;/span&gt;
+				&lt;/li&gt;&lt;li&gt;
+					&lt;span style="font-size: 10.0pt;"&gt;Up to 10 hours battery life&lt;/span&gt;
+				&lt;/li&gt;&lt;/ul&gt;
+False
+&lt;p&gt;&lt;font size="3"&gt;&lt;span&gt;x1 Carbon&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10.0pt;"&gt;The x1 Carbon is Lenovo&amp;#39;s lightest ThinkPad yet. It provides a QHD display that fights glare and weighs less than three pounds. Ideal for most computing tasks, and highly mobile. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10.0pt;"&gt;Technical Specs:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;Intel core i5 processor&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;512GB solid state drive (SSD) &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;Backlit keyboard&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+False
+&lt;p&gt;&lt;font size="3"&gt;&lt;span&gt;x1 Carbon&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10.0pt;"&gt;The x1 Carbon is Lenovo&amp;#39;s lightest ThinkPad yet. It provides a QHD display that fights glare and weighs less than three pounds. Ideal for most computing tasks, and highly mobile. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10.0pt;"&gt;Technical Specs:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;Intel core i5 processor&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;512GB solid state drive (SSD) &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10.0pt;"&gt;Backlit keyboard&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+False</msg>
+<msg timestamp="20231116 15:01:29.892" level="INFO">${value} = True</msg>
+<status status="PASS" starttime="20231116 15:01:07.416" endtime="20231116 15:01:29.892"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 15:01:29.892" endtime="20231116 15:01:29.901"/>
+</kw>
+<msg timestamp="20231116 15:01:29.901" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20231116 15:01:07.416" endtime="20231116 15:01:29.901"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231116 15:01:29.909" endtime="20231116 15:01:29.909"/>
+</kw>
+<kw name="if ${value}">
+<msg timestamp="20231116 15:01:29.925" level="FAIL">No keyword with name 'if ${value}' found.</msg>
+<status status="FAIL" starttime="20231116 15:01:29.925" endtime="20231116 15:01:29.925"/>
+</kw>
+<kw name="LoginToApplication">
+<status status="NOT RUN" starttime="20231116 15:01:29.934" endtime="20231116 15:01:29.934"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20231116 15:01:29.942" endtime="20231116 15:01:29.942"/>
+</kw>
+<status status="FAIL" starttime="20231116 15:01:07.408" endtime="20231116 15:01:29.942">No keyword with name 'if ${value}' found.</status>
+</test>
+<status status="FAIL" starttime="20231116 15:01:04.596" endtime="20231116 15:01:29.950"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="OrangeHRMLogin">OrangeHRMLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
