@@ -5,7 +5,7 @@ class getAllIncidentWithAssignedGroups:
  def getincidentWithAssignedGroupApi():
         listOfIncidents = []
         listOfIncidentsWithAssignedGroup = []
-        url = "https://dev179896.service-now.com/api/now/table/incident?sysparm_query=assignment_group=d625dccec0a8016700a222a0f7900d06"
+        url = "https://dev176532.service-now.com/api/now/table/incident?sysparm_query=assignment_group=d625dccec0a8016700a222a0f7900d06"
 
         headers = {
         "Content-Type": "application/json",
